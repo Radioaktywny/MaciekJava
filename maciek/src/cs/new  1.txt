@@ -1,0 +1,8 @@
+CS 1.6
+
+Gra Strzelanka
+
+Gracze Dzielą się w zespoły pięcio osobowe  , reprezentujący strone 
+Counter-terrorist i Terrorist. Zadaniem zespołu Terrorystów jest podłorzenie bomby w odpowiednie 
+miejsce lub wyeliminowanie wszystkich Counter-Terroistów. Rywale muszą uniemożliwić im zdetonowanie Bomby lub zabić wszystkich.
+Gracz porusza się z trzema dostępnymi brońmi.
