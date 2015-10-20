@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Znajdz To</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_druga_aktywnosc">DrugaAktywnosc</string>
+    <string name="zaloguj">Zaloguj się</string>
+    <string name="rejestracja">Zarejestruj się !</string>
+    <string name="login">Login</string>
+    <string name="haslo">Hasło</string>
+    
+
+</resources>

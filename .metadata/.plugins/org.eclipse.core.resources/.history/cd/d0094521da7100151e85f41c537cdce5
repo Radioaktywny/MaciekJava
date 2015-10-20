@@ -1,0 +1,16 @@
+
+public class Klient 
+{
+private String nazwisko;
+private String imie;
+private String mail;
+private String telefon;
+Bilet b;
+	Klient(String nazwisko, String imie, String mail, String telefon)
+	{
+		this.nazwisko=nazwisko;
+		this.imie=imie;
+		this.mail=mail;
+		this.telefon=telefon;		
+	}
+}

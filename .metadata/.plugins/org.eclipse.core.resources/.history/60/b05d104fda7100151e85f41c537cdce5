@@ -1,0 +1,15 @@
+
+public class Przejazd 
+{
+	protected int liczba_miejsc;
+	final String godzina;
+	final String dzien;
+	final String trasa;
+	Przejazd(String godzina,String dzien,String trasa)
+	{
+		liczba_miejsc=30;
+		this.godzina=godzina;
+		this.dzien=dzien;
+		this.trasa=trasa;
+	}
+}

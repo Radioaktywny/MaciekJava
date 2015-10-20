@@ -1,0 +1,18 @@
+
+public class Bilet 
+{
+	String trasa;
+	int liczba_miejsc;
+	public Bilet(int liczba_miejsc)
+	{
+		this.liczba_miejsc=liczba_miejsc;
+	}
+	public void setTrasa(String trasa)
+	{
+		this.trasa=trasa;
+	}
+	public String getTrasa()
+	{
+		return trasa;
+	}
+}
