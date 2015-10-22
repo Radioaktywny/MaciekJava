@@ -1,0 +1,20 @@
+package engine;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Engine 
+
+{
+	private int indexOfUsers=0;
+	private Map<Integer,User> listOfUsers= new HashMap<Integer,User>();
+	public void createNewUser(String login, String haslo , String email)
+	{
+		listOfUsers.put(indexOfUsers,new User(login,haslo,email));
+		++indexOfUsers;		
+	}
+	
+	public void editProfile()
+	
+	
+}
