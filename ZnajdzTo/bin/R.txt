@@ -449,8 +449,8 @@ int id always 0x7f090019
 int id beginning 0x7f09001e
 int id button1 0x7f09004f
 int id buttonPanel 0x7f090034
-int id button_rejestracja 0x7f090052
-int id button_zaloguj 0x7f090053
+int id button_rejestracja 0x7f090054
+int id button_zaloguj 0x7f090055
 int id cancel_action 0x7f090057
 int id checkbox 0x7f090036
 int id chronometer 0x7f09005d
@@ -517,8 +517,8 @@ int id tabMode 0x7f09000c
 int id text 0x7f090060
 int id text2 0x7f09005e
 int id textSpacerNoButtons 0x7f090031
-int id text_haslo 0x7f090055
-int id text_login 0x7f090054
+int id text_haslo 0x7f090053
+int id text_login 0x7f090052
 int id time 0x7f09005c
 int id title 0x7f09002a
 int id title_template 0x7f09002d

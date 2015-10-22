@@ -1,15 +1,30 @@
 package com.example.znajdzto;
 
 import android.support.v7.app.AppCompatActivity;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
 
+	
+	private final static String ADDRESS = "jdbc:mysql://localhost/apka?user=root&password=";
+	
+	 //obiekt tworz¹cy po³¹czenie z baz¹ danych.
+   
+    //zapytanie SQL
+    private String query;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -26,6 +41,49 @@ public class MainActivity extends AppCompatActivity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+	public void zalogujToDatabase(View view) throws InstantiationException, IllegalAccessException, ClassNotFoundException
+	{
+		EditText zalogujTxt = (EditText) findViewById(R.id.text_login);		
+		String login = zalogujTxt.toString();
+		
+		zalogujTxt = (EditText) findViewById(R.id.text_haslo);
+		String haslo = zalogujTxt.toString();
+		Connection conn = null;
+			
+		//dodaje do tabeli logowanie wartosci lugin i haslo
+		query="INSERT INTO logowanie VALUES('"+login+"','"+haslo+"')";
+		
+		try {
+			 
+            //Ustawiamy dane dotycz¹ce pod³¹czenia
+            conn = DriverManager.getConnection(ADDRESS);
+           
+            //Ustawiamy sterownik MySQL
+            Class.forName("com.mysql.jdbc.Driver");
+           
+            //Uruchamiamy zapytanie do bazy danych
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+       
+            
+
+            conn.close();
+    }
+    //Wyrzuæ wyj¹tki jê¿eli nast¹pi¹ b³êdy z pod³¹czeniem do bazy danych lub blêdy zapytania o dane
+    catch(ClassNotFoundException wyjatek) {
+            System.out.println("Problem ze sterownikiem");
+    }
+
+    catch(SQLException wyjatek) {
+            //e.printStackTrace();
+            //System.out.println("Problem z logowaniem\nProsze sprawdzic:\n nazwê u¿ytkownika, has³o, nazwê bazy danych lub adres IP serwera");
+            System.out.println("SQLException: " + wyjatek.getMessage());
+        System.out.println("SQLState: " + wyjatek.getSQLState());
+        System.out.println("VendorError: " + wyjatek.getErrorCode());
+    }
+	}
+		
+	
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

@@ -48,6 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/zaloguj" />
+        android:text="@string/zaloguj" 
+    	android:onClick="zalogujToDatabase"
+    	/>
 
 </RelativeLayout>

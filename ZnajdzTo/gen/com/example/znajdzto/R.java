@@ -2006,8 +2006,8 @@ containing a value of this type.
         public static final int beginning=0x7f09001e;
         public static final int button1=0x7f09004f;
         public static final int buttonPanel=0x7f090034;
-        public static final int button_rejestracja=0x7f090052;
-        public static final int button_zaloguj=0x7f090053;
+        public static final int button_rejestracja=0x7f090054;
+        public static final int button_zaloguj=0x7f090055;
         public static final int cancel_action=0x7f090057;
         public static final int checkbox=0x7f090036;
         public static final int chronometer=0x7f09005d;
@@ -2074,8 +2074,8 @@ containing a value of this type.
         public static final int text=0x7f090060;
         public static final int text2=0x7f09005e;
         public static final int textSpacerNoButtons=0x7f090031;
-        public static final int text_haslo=0x7f090055;
-        public static final int text_login=0x7f090054;
+        public static final int text_haslo=0x7f090053;
+        public static final int text_login=0x7f090052;
         public static final int time=0x7f09005c;
         public static final int title=0x7f09002a;
         public static final int title_template=0x7f09002d;

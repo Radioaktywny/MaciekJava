@@ -1,0 +1,70 @@
+package com.example.znajdzto;
+
+import android.support.v7.app.AppCompatActivity;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+
+public class MainActivity extends AppCompatActivity {
+
+	
+	private final static String DBURL = "jdbc:mysql://127.0.0.1:3306/blog";
+	private final static String DBUSER = "root";
+	private final static String DBPASS = "";
+	private final static String DBDRIVER = "com.mysql.jdbc.Driver";
+	
+	 //obiekt tworz¹cy po³¹czenie z baz¹ danych.
+    private Connection connection;
+    //obiekt pozwalaj¹cy tworzyæ nowe wyra¿enia SQL
+    private Statement statement;
+    //zapytanie SQL
+    private String query;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+	public void ladujDrugaAktywnosc(View view)
+	{
+		Intent intent = new Intent(MainActivity.this,DrugaAktywnosc.class);		
+		startActivity(intent);
+	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+	public void ZalogujToDatabase()
+	{
+		EditText zalogujTxt = (EditText) findViewById(R.id.text_login);
+		EditText zalogujTxt1 = (EditText) findViewById(R.id.text_haslo);
+		String login = zalogujTxt.toString();
+		String haslo = zalogujTxt.toString();
+		//dodaje do tabeli logowanie wartosci lugin i haslo
+		query="INSERT INTO logowanie VALUES('"+login+"','"+haslo+"')";
+		
+		
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}
